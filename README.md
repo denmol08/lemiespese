@@ -12,12 +12,12 @@ Le mie spese
 
 <h2>Configurazione</h2>
 <p>
-  Vanno create due enviroment variables. 
-  LS_DEBUG_VALUE: True o False, in base all'ambiente di deploy (False per produzione)
+  Vanno create due enviroment variables. <br>
+  LS_DEBUG_VALUE: True o False, in base all'ambiente di deploy (False per produzione) <br>
   LS_SECURITY_KEY: chiave random usata da django per la sicurezza. Può essere generata con secrets di python (vedi https://docs.python.org/3/library/secrets.html)
 </p>
 <p>
-  Creazione super user:
+  Creazione super user: <br>
   Eseguire comando "python manage.py createsuperuser"
 </p>
 <p>
