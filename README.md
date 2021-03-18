@@ -21,7 +21,7 @@ Le mie spese
   Eseguire comando "python manage.py createsuperuser"
 </p>
 <p>
-  Aggiungere l'host nella lista di hosts in settings.py ALLOWED_HOSTS
+  Aggiungere l'host nella lista di hosts in settings.py ALLOWED_HOSTS (se non in locale)
 </p>
 
 <h2>Demo</h2>
