@@ -23,3 +23,6 @@ Le mie spese
 <p>
   Aggiungere l'host nella lista di hosts in settings.py ALLOWED_HOSTS
 </p>
+
+<h2>Demo</h2>
+https://lemiespeseapp.herokuapp.com/
