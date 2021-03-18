@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'lista_spese/main.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'users/main.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lista_spese/grid.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'lista_spese/form.css'%}">
+	<script src="{% static 'lista_spese/main.js'%}"></script>
+	<script src="{% static 'lista_spese/grid.js'%}"></script>
+	<script src="{% static 'lista_spese/form.js'%}"></script>
+	<link rel="shortcut icon" href="{%  static 'lista_spese/favicon.png' %}">
+	<title>Le mie Spese</title>
+</head>
+<body>
+	<div class='topnavbar'>
+		<ul>
+		  	<li><a href="{% url 'home-spese' %}" style='padding: 2px 14px; font-size: 30px;font-family: cursive;'>
+		  		<b>Le mie spese</b>
+		  	</a></li>
+		  	{% if user.is_authenticated %}
+		  		<li style='float:right'><a href="{% url 'logout' %}"><div>Logout</div></a></li>
+		  	{% endif %}
+		</ul>
+	</div>
+
+	{% block content %}
+	{% endblock %}
+</body>	
+</html>

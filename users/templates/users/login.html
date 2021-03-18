@@ -1,0 +1,22 @@
+{% extends 'lista_spese/base.html' %}
+{% block content %}
+<div class='form-div'>
+	<form method="POST">
+		{% csrf_token %}
+		<fieldset>
+			<legend>Entra ora</legend>
+			{{ form.as_p }}
+			<button class='set-button' id='register-form-button' type='submit'>
+				Entra
+			</button>
+		</fieldset>
+		
+	</form>
+	<div class='small-mex-login'>
+		<small style="margin-top: 10px;margin-left: 5px">
+			Non hai un account?  <a href="{% url 'register' %}">Registrati qui</a>
+		</small>
+	</div>
+</div>
+
+{% endblock content %}

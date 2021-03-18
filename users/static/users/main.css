@@ -1,0 +1,54 @@
+.form-div {
+	margin:auto;
+	margin-top: 30px;
+	border-radius: 8px;
+	box-shadow: 2px 2px 2px gray;
+	width:50%;
+	border:1px solid gray;
+	padding:10px;
+}
+
+.form-div fieldset {
+	border-top: 1px solid gray;
+	border-color: gray;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom:0px;
+}
+
+
+.helptext {
+	font-size: 12px;
+	display: block;
+}
+
+.form-div ul {
+	font-size: 12px;
+}
+
+.form-div input {
+	width:90%;
+	height: 30px;
+	font-size: 15px;
+	vertical-align: middle;
+	border: 1px solid gray;
+	border-color: gray;
+	border-radius: 4px
+}
+.form-div input:focus {
+	outline: none
+}
+.form-div label {
+	display: inline-block;
+	width: 90%;
+}
+
+.errorlist {
+	color:red;
+}
+
+.small-mex-login {
+	border-top: 1px solid gray;
+	margin-top: 10px;
+	margin-left: 5px;
+}

@@ -1,0 +1,72 @@
+{%extends "lista_spese/base.html"%}
+
+{% block content %}
+<script type="text/javascript">
+	window.onload = reloadGridSpese;
+</script>
+<div class="container">
+	<div id='filtro' >
+		<form id=filtro onsubmit="return false;">
+			<div id='gridContainerFiltro'>
+				<label for='periodo' class='elemento-filtro'>Periodo:</label>
+				<select name='periodo' id='periodo' class='select' class='elemento-filtro' onchange="reloadGridData()">
+					<option value="tutti">-------------</option>
+					<option value="ultimo_mese">Ultimo mese</option>
+					<option value="ultimo_trimestre">Ultimi 3 mesi</option>
+					<option value="ultimo_anno">Ultimo anno</option>
+				</select>
+				<label for='filtro-descrizione' class='elemento-filtro' id='label-filtro-descrizione'>Descrizione</label>
+				<input type="text" id='filtro-descrizione' name="filtro-descrizione" class='elemento-filtro' oninput="reloadGridData()">
+			</div>	
+		</form>
+	</div>
+</div>
+<div id='gridContainerSpese'>
+	<div class='container'>
+		<div id='panelListaSpese'>
+			<div id='spese' class='tableContainer'>
+				<table id='table-spese' class='grid'>
+					<thead>
+						<tr>
+							<th class='modifica'></th>
+							<th class='cancella'></th>
+							<th class='data'>Data</th>
+							<th class='descrizione'>Descrizione</th>
+							<th class='importo'>Importo</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				
+			</div>
+			<div id='totale-spese'>
+				<b>TOTALE:</b>
+				<b id='totale'></b>
+			</div>
+		</div>
+	</div>	
+	<div class ='container'>
+		<div id='formSpese'>
+			<div id='toolbar'>
+				<button id='newSpesaButton' class='set-button' onclick='setFormSpese()'>Nuovo</button>
+				<button id='setSpesaButton' class='set-button' onclick='submitFormSpese()'>Salva</button>
+			</div>
+			<form onsubmit="return false;">
+				<br>
+				<small id='erroreImporto' class='errore-form'></small>
+				<br>
+				<label for='importo'>Importo</label>
+				<input type="number" id='importo' name="importo" step='.01' min='0' max='9999999999.99' required="true">
+				<br>
+				<br>
+				<br>
+				<br>
+				<small id='erroreDescrizione' class='errore-form'></small>
+				<br>
+				<label for='descrizione'>Descrizione</label>
+				<textarea rows='10' columns='100' id='descrizione' name="descrizione" placeholder="Descrizione della spesa" style="resize:none" required></textarea>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,55 @@
+
+#formSpese label {
+	display: inline-table;
+	width: 30%;
+}
+
+#formSpese input:not(#submit),#formSpese textarea {
+	width:60%;
+	font-size: 15px;
+	vertical-align : text-top;
+}
+
+#formSpese {
+	margin-left: 2vw;
+}
+
+.image-button{
+	cursor: pointer;
+}
+
+
+.errore-form {
+	color:red;
+}
+
+.errore-input-form {
+	border: 2px solid red;
+}
+
+#filtro {
+	height:20vh;
+	width:auto;
+}
+
+#label-filtro-descrizione {
+	margin-left: 20vw
+}
+
+#gridContainerFiltro {
+	display: grid;
+	grid-template-columns: 10vw 10vw 30vw 20vw;
+}
+
+.elemento-filtro {
+	margin-left: 10px;
+	margin-right: 10px;
+	align-self: center;
+	height: 30px
+}
+
+#filtro {
+	display: flex;
+	align-items: center;
+}
+
