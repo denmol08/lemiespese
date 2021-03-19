@@ -1,4 +1,4 @@
-
+//cookie, per il token csfr per le chiamate post
 function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -14,6 +14,7 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
 
 function asyncRequest(view,method,jsonBody,callback,callbackErr){
     var xhr = new XMLHttpRequest();

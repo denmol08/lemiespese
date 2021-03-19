@@ -14,7 +14,8 @@ class UserRegistrationForm(UserCreationForm):
 			},
 			'password1': {
 				'min_length': 'La password è troppo corta',
-				'required': 'Il campo è obbligatorio'
+				'required': 'Il campo è obbligatorio',
+				'password_mismatch': 'Le due password non coincidono'
 			},
 			'password2': {
 				'password_mismatch': 'Le due password non coincidono'
